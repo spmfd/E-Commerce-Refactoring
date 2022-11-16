@@ -14,6 +14,8 @@ ProductTag.init(
     },
     product_id: {
       type: DataTypes.INTEGER,
+      foreignKey: true,
+      onUpdate: 'CASCADE',
       references: {
         model: 'product',
         key: 'id',
